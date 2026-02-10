@@ -59,7 +59,94 @@ Respectfully,
 A Student of SRKR Engineering College`;
 
 // -----------------------------------------------
-// 3. EMAIL COUNTER
+// 3. DYNAMICALLY POPULATE DROPDOWNS
+//    Inject recipient and influencer options from JS objects
+// -----------------------------------------------
+function populateOfficialDropdown() {
+  const select = document.getElementById("officialSelect");
+  if (!select) return;
+
+  // Clear existing options except the first placeholder
+  while (select.options.length > 1) {
+    select.remove(1);
+  }
+
+  // Map display names for officials
+  const officialNames = {
+    aicte: "AICTE Chairman",
+    apsche: "APSCHE Commissioner",
+    india_portal: "India Portal",
+    narendra_modi: "PM Office",
+    e_samadhan: "E-Samadhan UGC",
+    pgrs: "PGRS AP Helpdesk",
+  };
+
+  // Add options from RECIPIENTS object
+  Object.entries(RECIPIENTS).forEach(([key, email]) => {
+    const option = document.createElement("option");
+    option.value = key;
+    option.textContent = `${officialNames[key]} (${email})`;
+    select.appendChild(option);
+  });
+}
+
+function populateInfluencerDropdown() {
+  const select = document.getElementById("influencerSelect");
+  if (!select) return;
+
+  // Clear existing options except the first placeholder
+  while (select.options.length > 1) {
+    select.remove(1);
+  }
+
+  // Map display names for influencers
+  const influencerNames = {
+    hitesh_choudhary: "Hitesh Choudhary",
+    dhruv_rathee: "Dhruv Rathee",
+    psd_talks: "PSD Talks",
+    vr_raja: "VR Raja",
+    aye_jude: "Aye Jude",
+    personal_brand: "Kranthi World",
+    sunny_yadav: "Sunny Yadav",
+  };
+
+  // Add options from INFLUENCERS object
+  Object.entries(INFLUENCERS).forEach(([key, email]) => {
+    const option = document.createElement("option");
+    option.value = key;
+    option.textContent = `${influencerNames[key]} (${email})`;
+    select.appendChild(option);
+  });
+}
+
+function populateRecipientCards() {
+  const container = document.querySelector(".recipient-cards");
+  if (!container) return;
+
+  // Clear existing cards
+  container.innerHTML = "";
+
+  // Map display names for officials
+  const officialNames = {
+    aicte: "AICTE",
+    apsche: "APSCHE",
+    india_portal: "India Portal",
+    narendra_modi: "PM Office",
+    e_samadhan: "E-Samadhan UGC",
+    pgrs: "PGRS AP Helpdesk",
+  };
+
+  // Create cards from RECIPIENTS object
+  Object.entries(RECIPIENTS).forEach(([key, email]) => {
+    const card = document.createElement("div");
+    card.className = "recipient-card";
+    card.innerHTML = `<strong>${officialNames[key]}</strong><span>${email}</span>`;
+    container.appendChild(card);
+  });
+}
+
+// -----------------------------------------------
+// 4. EMAIL COUNTER
 //    Track the number of emails sent using localStorage
 // -----------------------------------------------
 // function getEmailCount() {
@@ -79,8 +166,11 @@ A Student of SRKR Engineering College`;
 //   }
 // }
 
-// Initialize counter on page load
+// Initialize dropdowns and counter on page load
 document.addEventListener('DOMContentLoaded', () => {
+  populateOfficialDropdown();
+  populateInfluencerDropdown();
+  populateRecipientCards();
   updateEmailCounterDisplay();
 });
 
