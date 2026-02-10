@@ -145,33 +145,11 @@ function populateRecipientCards() {
   });
 }
 
-// -----------------------------------------------
-// 4. EMAIL COUNTER
-//    Track the number of emails sent using localStorage
-// -----------------------------------------------
-// function getEmailCount() {
-//   return parseInt(localStorage.getItem('emailCount') || '0', 10);
-// }
-
-// function incrementEmailCount() {
-//   const count = getEmailCount() + 1;
-//   localStorage.setItem('emailCount', count.toString());
-//   updateEmailCounterDisplay();
-// }
-
-// function updateEmailCounterDisplay() {
-//   const counterElement = document.getElementById('emailCounter');
-//   if (counterElement) {
-//     counterElement.textContent = getEmailCount();
-//   }
-// }
-
-// Initialize dropdowns and counter on page load
+// Initialize dropdowns on page load
 document.addEventListener('DOMContentLoaded', () => {
   populateOfficialDropdown();
   populateInfluencerDropdown();
   populateRecipientCards();
-  updateEmailCounterDisplay();
 });
 
 // -----------------------------------------------
@@ -247,9 +225,6 @@ function sendEmail(target, type = 'official') {
 
   // Open the user's email client
   window.open(mailtoURL, "_blank");
-
-  // Increment email counter
-  incrementEmailCount();
 
   // Show success feedback
   showToast(`✅ Email client opened for ${label}!`);
