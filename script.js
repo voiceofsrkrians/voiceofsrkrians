@@ -19,11 +19,13 @@ const RECIPIENTS = {
 
 // Influencers email addresses
 const INFLUENCERS = {
+  hitesh_choudhary: "team@hiteshchoudhary.com",
   dhruv_rathee: "contact@dhruvrathee.com",
-  pradeep_poonia: "pradeeppoonia@example.com",
-  soch_by_mohak: "mohak@sochbymohak.com",
-  the_deshbhakt: "contact@thedeshbhakt.com",
-  news_laundry: "contact@newslaundry.com",
+  psd_talks: "events@psdtalk.com",
+  vr_raja: "contact@vrraja.com",
+  aye_jude: "info@ayejude.com",
+  personal_brand: "kranthiworld32@gmail.com",
+  sunny_yadav: "bayyasunnyyadav390@gmail.com",
 };
 
 // -----------------------------------------------
