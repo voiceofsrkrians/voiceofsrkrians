@@ -60,22 +60,22 @@ A Student of SRKR Engineering College`;
 // 3. EMAIL COUNTER
 //    Track the number of emails sent using localStorage
 // -----------------------------------------------
-function getEmailCount() {
-  return parseInt(localStorage.getItem('emailCount') || '0', 10);
-}
+// function getEmailCount() {
+//   return parseInt(localStorage.getItem('emailCount') || '0', 10);
+// }
 
-function incrementEmailCount() {
-  const count = getEmailCount() + 1;
-  localStorage.setItem('emailCount', count.toString());
-  updateEmailCounterDisplay();
-}
+// function incrementEmailCount() {
+//   const count = getEmailCount() + 1;
+//   localStorage.setItem('emailCount', count.toString());
+//   updateEmailCounterDisplay();
+// }
 
-function updateEmailCounterDisplay() {
-  const counterElement = document.getElementById('emailCounter');
-  if (counterElement) {
-    counterElement.textContent = getEmailCount();
-  }
-}
+// function updateEmailCounterDisplay() {
+//   const counterElement = document.getElementById('emailCounter');
+//   if (counterElement) {
+//     counterElement.textContent = getEmailCount();
+//   }
+// }
 
 // Initialize counter on page load
 document.addEventListener('DOMContentLoaded', () => {
