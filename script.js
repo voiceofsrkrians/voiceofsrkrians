@@ -159,22 +159,8 @@ document.addEventListener('DOMContentLoaded', () => {
 // -----------------------------------------------
 function sendEmail(target, type = 'official') {
   // Read form values
-  const name = document.getElementById("studentName").value.trim();
-  const branch = document.getElementById("studentBranch").value.trim();
-  const year = document.getElementById("studentYear").value;
-
   const subject = document.getElementById("emailSubject").value.trim();
   let body = document.getElementById("emailBody").value.trim();
-
-  // Append student details to body if provided
-  const details = [];
-  if (name) details.push(`Name: ${name}`);
-  if (branch) details.push(`Branch: ${branch}`);
-  if (year) details.push(`Year: ${year}`);
-
-  if (details.length > 0) {
-    body += "\n\n--- Student Details ---\n" + details.join("\n");
-  }
 
   // Determine recipient(s)
   let to = "";
@@ -287,9 +273,6 @@ function fallbackCopy(text, successMsg) {
 // 8. RESET FORM TO DEFAULTS
 // -----------------------------------------------
 function resetForm() {
-  document.getElementById("studentName").value = "";
-  document.getElementById("studentBranch").value = "";
-  document.getElementById("studentYear").value = "";
   document.getElementById("emailSubject").value = DEFAULT_SUBJECT;
   document.getElementById("emailBody").value = DEFAULT_BODY;
 
