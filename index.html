@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voice of SRKRIANS — Student Awareness &amp; Support Platform</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- ===========================
+       NAVBAR
+  ============================ -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon">📢</span> Voice of SRKRIANS
+            </a>
+
+            <!-- Hamburger (mobile) -->
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#email-section">Send Email</a></li>
+                <li><a href="#safety">Safety Rules</a></li>
+                <li>
+                    <a href="https://t.me/voiceofsrkrians" target="_blank" rel="noopener noreferrer"
+                        class="nav-btn">Join Telegram</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===========================
+       HERO / LANDING SECTION
+  ============================ -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <p class="hero-badge animate-fade-up">🎓 Student Awareness &amp; Support Platform</p>
+            <h1 class="hero-title animate-fade-up delay-1">
+                Voice of <span class="highlight">SRKRIANS</span>
+            </h1>
+            <p class="hero-desc animate-fade-up delay-2">
+                This platform empowers every student to raise concerns about the <strong>retrospective fee
+                    revision</strong>
+                implemented without prior notice. Students can send a formal, respectful inquiry to the relevant
+                authorities — quickly,
+                safely, and with full transparency.
+            </p>
+            <div class="hero-actions animate-fade-up delay-3">
+                <a href="#email-section" class="btn btn-primary">
+                    ✉️ Send Email Now
+                </a>
+                <a href="https://t.me/voiceofsrkrians" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-outline">
+                    💬 Join Telegram
+                </a>
+            </div>
+
+            <!-- Stats strip -->
+            <div class="stats-strip animate-fade-up delay-4">
+                <div class="stat">
+                    <strong id="emailCounter">0</strong>
+                    <span>Emails Sent</span>
+                </div>
+                <div class="stat">
+                    <strong>2</strong>
+                    <span>Authorities Contacted</span>
+                </div>
+                <div class="stat">
+                    <strong>100%</strong>
+                    <span>Respectful &amp; Legal</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+       ABOUT THE ISSUE
+  ============================ -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">What's the Concern?</h2>
+            <p class="section-subtitle">
+                Understanding the fee revision matter and student rights.
+            </p>
+
+            <div class="cards-grid">
+                <!-- Card 1 -->
+                <div class="card animate-on-scroll">
+                    <div class="card-icon">💰</div>
+                    <h3>Retrospective Fee Revision</h3>
+                    <p>
+                        A fee revision has been implemented for currently enrolled students
+                        without prior notice. Students seek clarity on whether this follows
+                        AICTE and APSCHE guidelines.
+                    </p>
+                </div>
+                <!-- Card 2 -->
+                <div class="card animate-on-scroll">
+                    <div class="card-icon">📜</div>
+                    <h3>Our Rights</h3>
+                    <p>
+                        As per AICTE regulations and the Supreme Court guidelines, fee
+                        revisions must follow due process, be transparent, and not be applied
+                        retrospectively to existing students.
+                    </p>
+                </div>
+                <!-- Card 3 -->
+                <div class="card animate-on-scroll">
+                    <div class="card-icon">🤝</div>
+                    <h3>Collective Voice</h3>
+                    <p>
+                        This platform provides a structured, respectful, and legal channel to
+                        communicate concerns — sending formal inquiries to the relevant authorities
+                        for guidance.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+       EMAIL SENDER SECTION
+  ============================ -->
+    <section class="section section-alt" id="email-section">
+        <div class="container">
+            <h2 class="section-title">📧 Send Your Inquiry</h2>
+            <p class="section-subtitle">
+                Fill in the optional details below. A pre-written formal inquiry is
+                ready — just hit send!
+            </p>
+
+            <div class="email-form-card animate-on-scroll">
+                <form id="emailForm" onsubmit="return false;">
+                    <!-- Row: Name, Branch, Year -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="studentName">Your Name <small>(optional)</small></label>
+                            <input type="text" id="studentName" placeholder="Your Name (optional)" />
+                        </div>
+                        <div class="form-group">
+                            <label for="studentBranch">Branch <small>(optional)</small></label>
+                            <input type="text" id="studentBranch" placeholder="e.g. CSE" />
+                        </div>
+                        <div class="form-group">
+                            <label for="studentYear">Year <small>(optional)</small></label>
+                            <select id="studentYear">
+                                <option value="">Select Year</option>
+                                <option value="1st Year">1st Year</option>
+                                <option value="2nd Year">2nd Year</option>
+                                <option value="3rd Year">3rd Year</option>
+                                <option value="4th Year">4th Year</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Subject -->
+                    <div class="form-group">
+                        <label for="emailSubject">Email Subject</label>
+                        <input type="text" id="emailSubject"
+                            value="Inquiry Regarding Retrospective Fee Revision — Request for Guidance" />
+                    </div>
+
+                    <!-- Body -->
+                    <div class="form-group">
+                        <label for="emailBody">Email Body <small>(editable)</small></label>
+                        <textarea id="emailBody" rows="14">Respected Sir/Madam,
+
+I am writing to seek guidance on a matter concerning students at SRKR Engineering College.
+
+A retrospective fee revision has been implemented for currently enrolled students without prior notice. This has created financial challenges for students and their families, particularly those from economically modest backgrounds.
+
+We respectfully seek clarification on whether this process aligns with the guidelines established by AICTE and APSCHE, which typically require:
+- Due process and transparency in fee revisions
+- Approval by the Fee Regulatory Committee
+- Protection for students admitted under a previously established fee structure
+
+We humbly request your esteemed office to:
+1. Review the fee revision process followed by the institution
+2. Provide guidance on compliance with AICTE / APSCHE regulations
+3. Advise on appropriate measures to address student concerns
+
+We approach this matter with respect and in accordance with all applicable laws and regulations.
+
+Thank you for your time and consideration.
+
+Respectfully,
+A Student of SRKR Engineering College</textarea>
+                    </div>
+
+                    <!-- Officials Dropdown Section -->
+                    <div class="form-group">
+                        <label for="officialSelect">📋 Select Official</label>
+                        <select id="officialSelect" class="recipient-select">
+                            <option value="">-- Select an Official --</option>
+                            <option value="aicte">AICTE Chairman (chairman@aicte-india.org)</option>
+                            <option value="apsche">APSCHE Commissioner (commissionerche@gmail.com)</option>
+                            <option value="india_portal">India Portal (indiaportal@gov.in)</option>
+                            <option value="narendra_modi">PM Office (narendramodi1234@gmail.com)</option>
+                            <option value="e_samadhan">E-Samadhan UGC (e-samadhan@ugc.gov.in)</option>
+                            <option value="pgrs">PGRS AP Helpdesk (pgrs-helpdesk@ap.gov.in)</option>
+                        </select>
+                    </div>
+
+                    <!-- Influencers Dropdown Section -->
+                    <div class="form-group">
+                        <label for="influencerSelect">🎭 Select Influencer</label>
+                        <select id="influencerSelect" class="recipient-select">
+                            <option value="">-- Select an Influencer --</option>
+                            <option value="dhruv_rathee">Dhruv Rathee (contact@dhruvrathee.com)</option>
+                            <option value="pradeep_poonia">Pradeep Poonia (pradeeppoonia@example.com)</option>
+                            <option value="soch_by_mohak">Soch by Mohak (mohak@sochbymohak.com)</option>
+                            <option value="the_deshbhakt">The Deshbhakt (contact@thedeshbhakt.com)</option>
+                            <option value="news_laundry">News Laundry (contact@newslaundry.com)</option>
+                        </select>
+                    </div>
+
+                    <!-- Action buttons -->
+                    <div class="email-actions">
+                        <button type="button" class="btn btn-primary" onclick="sendEmail('selected-official')">
+                            📨 Send to Selected Official
+                        </button>
+                        <button type="button" class="btn btn-accent" onclick="sendEmail('selected-influencer')">
+                            📨 Send to Selected Influencer
+                        </button>
+                        <button type="button" class="btn btn-dark" onclick="sendEmail('all-officials')">
+                            🚀 Send to All Officials
+                        </button>
+                        <button type="button" class="btn btn-secondary" onclick="sendEmail('all-influencers')">
+                            🌟 Send to All Influencers
+                        </button>
+                    </div>
+
+                    <!-- Utility buttons -->
+                    <div class="utility-actions">
+                        <button type="button" class="btn btn-outline btn-sm" onclick="copyEmail()">
+                            📋 Copy Email Body
+                        </button>
+                        <button type="button" class="btn btn-outline btn-sm" onclick="copySubject()">
+                            📋 Copy Subject
+                        </button>
+                        <button type="button" class="btn btn-outline btn-sm" onclick="resetForm()">
+                            🔄 Reset to Default
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Recipient Info -->
+            <div class="recipient-info animate-on-scroll">
+                <h3>📬 Recipient Addresses</h3>
+                <div class="recipient-cards">
+                    <div class="recipient-card">
+                        <strong>AICTE</strong>
+                        <span>chairman@aicte-india.org</span>
+                    </div>
+                    <div class="recipient-card">
+                        <strong>APSCHE</strong>
+                        <span>commissionerche@gmail.com</span>
+                    </div>
+                    <!-- <div class="recipient-card">
+                        <strong>College Admin</strong>
+                        <span>principal@srkrit.ac.in</span>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+       SAFETY RULES
+  ============================ -->
+    <section class="section" id="safety">
+        <div class="container">
+            <h2 class="section-title">⚠️ Safety &amp; Guidelines</h2>
+            <p class="section-subtitle">
+                We are stronger when we stay disciplined. Follow these rules at all times.
+            </p>
+
+            <div class="safety-grid animate-on-scroll">
+                <div class="safety-card safe">
+                    <div class="safety-icon">✅</div>
+                    <h4>Stay Respectful</h4>
+                    <p>Always use polite and professional language in every communication.</p>
+                </div>
+                <div class="safety-card safe">
+                    <div class="safety-icon">✅</div>
+                    <h4>Only Facts</h4>
+                    <p>Share only verified, factual information. Avoid rumors and exaggeration.</p>
+                </div>
+                <div class="safety-card safe">
+                    <div class="safety-icon">✅</div>
+                    <h4>Peaceful Approach</h4>
+                    <p>Our movement is 100% legal and peaceful. Follow all laws and regulations.</p>
+                </div>
+                <div class="safety-card danger">
+                    <div class="safety-icon">🚫</div>
+                    <h4>No Abuse or Threats</h4>
+                    <p>Never use abusive language, threats, or personal attacks against anyone.</p>
+                </div>
+                <div class="safety-card danger">
+                    <div class="safety-icon">🚫</div>
+                    <h4>No Misinformation</h4>
+                    <p>Do not spread unverified claims. Double-check everything before sharing.</p>
+                </div>
+                <div class="safety-card safe">
+                    <div class="safety-icon">✅</div>
+                    <h4>Protect Privacy</h4>
+                    <p>Do not share personal details of others without their explicit consent.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+       FOOTER
+  ============================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>📢 Voice of SRKRIANS</h3>
+                    <p>Student Awareness &amp; Support Platform</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#email-section">Send Email</a>
+                    <a href="#safety">Safety Rules</a>
+                    <a href="https://t.me/voiceofsrkrians" target="_blank" rel="noopener noreferrer">Telegram</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>
+                    Made with ❤️ by SRKRIANS &bull; This is a peaceful, student-led
+                    awareness initiative &bull; &copy; 2026
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast notification container -->
+    <div id="toast" class="toast" role="alert" aria-live="assertive"></div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
