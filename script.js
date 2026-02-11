@@ -33,30 +33,35 @@ const INFLUENCERS = {
 //    Stored so we can reset the form if needed.
 // -----------------------------------------------
 const DEFAULT_SUBJECT =
-  "Inquiry Regarding Retrospective Fee Revision — Request for Guidance";
+  "Request for Clarification and Intervention Regarding Retrospective Tuition Fee Collection Affecting 8000+ Students";
 
 const DEFAULT_BODY = `Respected Sir/Madam,
 
-I am writing to seek guidance on a matter concerning students at SRKR Engineering College.
+I am writing to bring to your attention a serious issue affecting students of Sagi Rama Krishnam Raju Engineering College, Bhimavaram.
 
-A retrospective fee revision has been implemented for currently enrolled students without prior notice. This has created financial challenges for students and their families, particularly those from economically modest backgrounds.
+At the time of admission, the annual tuition fee for our batch was clearly specified as ₹77,000 per year, and students have already paid the full fee for the completed academic years as per the prescribed structure.
 
-We respectfully seek clarification on whether this process aligns with the guidelines established by AICTE and APSCHE, which typically require:
-- Due process and transparency in fee revisions
-- Approval by the Fee Regulatory Committee
-- Protection for students admitted under a previously established fee structure
+Recently, the college issued a circular revising the annual tuition fee to ₹1,05,000 and is now demanding that currently enrolled students pay an additional “balance fee” for previous academic years that were already completed and fully paid.
 
-We humbly request your esteemed office to:
-1. Review the fee revision process followed by the institution
-2. Provide guidance on compliance with AICTE / APSCHE regulations
-3. Advise on appropriate measures to address student concerns
+This effectively results in a retrospective fee increase of ₹28,000 per past year, placing an unexpected financial burden on students and their families.
 
-We approach this matter with respect and in accordance with all applicable laws and regulations.
+Our institution has more than 8000+ students, and this decision impacts a large number of middle-class and economically constrained families.
+
+We respectfully request your kind intervention to:
+
+• Clarify whether retrospective fee collection for already paid academic years is legally permitted  
+• Verify whether this fee revision has proper approval from AICTE/APSCHE/Fee Regulatory authorities  
+• Ensure protection of students from unfair or non-transparent fee practices  
+
+We wish to emphasize that our approach is completely peaceful, respectful, and lawful. We are only seeking fairness, transparency, and protection of student rights.
+
+We sincerely request your support and guidance in resolving this matter.
 
 Thank you for your time and consideration.
 
 Respectfully,
-A Student of SRKR Engineering College`;
+A Concerned Student  
+SRKR Engineering College`;
 
 // -----------------------------------------------
 // 3. DYNAMICALLY POPULATE DROPDOWNS
